@@ -8,11 +8,7 @@
 
 <script>
 export default {
-  computed: {
-    lines () {
-      return require('@/mock/lines.json')
-    }
-  }
+  props: [ 'lines' ]
 }
 </script>
 

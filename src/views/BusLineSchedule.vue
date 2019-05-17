@@ -14,6 +14,7 @@ import ScheduleHeader from '@/components/ScheduleHeader.vue'
 import ScheduleList from '@/components/ScheduleList.vue'
 
 export default {
+  props: ['lines'],
   components: {
     'schedule-header': ScheduleHeader,
     'schedule-list': ScheduleList
@@ -21,8 +22,7 @@ export default {
   computed: {
     line () {
       let id = this.$route.params.id;
-      let lines = require('@/mock/lines.json');
-      return lines.find( function( element ) {
+      return this.lines.find( function( element ) {
         if ( element.id == id )  return element
       })
     },

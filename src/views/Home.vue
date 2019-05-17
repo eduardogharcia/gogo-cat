@@ -2,7 +2,7 @@
   <div class="home">
     <img class="home__logo" src="../assets/img/logo.svg">
     <h1 class="home__name">IBusao</h1>
-    <ListLines/>
+    <ListLines :lines="lines"/>
   </div>
 </template>
 
@@ -12,6 +12,7 @@ import ListLines from '@/components/ListLines.vue'
 
 export default {
   name: 'home',
+  props: ['lines'],
   components: {
     ListLines
   }

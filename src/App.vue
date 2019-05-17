@@ -2,7 +2,7 @@
   <div id="app" class="app">
     <nav-bar v-on:openclose="toggleAbout"/>
     <transition name="page" mode="out-in">
-    <router-view/>
+    <router-view :lines="lines"/>
     </transition>
     <about v-bind:class="{ app__about: true, 'app__about--open': aboutOpen }"/>
   </div>
@@ -11,6 +11,8 @@
 <script>
   import NavBar from '@/components/NavBar.vue'
   import About from '@/components/About.vue'
+  import axios from 'axios'
+
   export default {
     components: {
       'nav-bar': NavBar,
@@ -18,13 +20,28 @@
     },
     data() {
       return {
-        aboutOpen: false
+        aboutOpen: false,
+        lines: []
       }
     },
     methods: {
       toggleAbout () {
         this.aboutOpen = this.aboutOpen ? false : true
       }
+    },
+    created () {
+      this.lines = localStorage.lines || []
+      axios.get( 'lines.js' )
+      .then( response => {
+        localStorage.lines =  JSON.stringify( response.data )
+        let date = new Date()
+        localStorage.lastUpdate = date.getTime()
+        this.lines = JSON.parse( localStorage.lines )
+      })
+      .catch ( e => {
+        console.log( 'Error' )
+        this.errors.push( e )
+      })
     }
   }
 </script>
