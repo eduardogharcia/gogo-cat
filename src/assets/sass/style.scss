@@ -1,0 +1,30 @@
+// Abstracts
+@import 'abstracts/_colors';
+@import 'abstracts/_breakpoints';
+
+// Base
+@import 'base/_normalize';
+@import 'base/_form';
+@import 'base/_my-reset';
+
+// Layout
+@import 'layout/_container';
+@import 'layout/_text-helpers';
+@import 'layout/_img-align';
+
+// Objects
+@import 'objects/_img';
+@import 'objects/_z-level';
+@import 'objects/_visibility';
+@import 'objects/_vertical-space';
+
+
+// Vendors
+@import 'vendors/_bootstrap-grid';
+
+
+body{
+  background-color: $main-color;
+  color: #fff;
+
+}

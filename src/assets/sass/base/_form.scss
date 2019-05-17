@@ -1,0 +1,73 @@
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="search"],
+input[type="select"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select{
+  border: 1px solid #959494;
+  // box-shadow: 0 2px 2px #DDDDDD inset;
+  color: $read-color;
+  width: 100%;
+  padding: 12px 8px;
+  &::placeholder{
+    color: #c7c7c7;
+  }
+}
+
+.form{
+  &__group{
+    margin-bottom: 15px;
+    position: relative;
+  }
+  &__label{
+    margin-bottom: 5px;
+    display: block;
+  }
+  &__control{
+    &__toggle-password{
+      cursor: pointer;
+      pointer-events: all;
+      position: absolute;
+      right: 10px;
+      bottom: 8px;
+      color: $read-color;
+    }
+  }
+}
+label.error{
+  background: #f00;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+
+  
+}
+.wpcf7-not-valid-tip{
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #ec2626;
+  color: #fff !important;
+  border-radius: 3px;
+  padding: 2px 5px;
+  font-size: 14px;
+}
+
+.wpcf7-validation-errors{
+  background: #ec2626;
+  color: #fff !important;
+  border-radius: 3px;
+  border: none !important;
+}
+
+.wpcf7-form-control-wrap{
+  display: block;
+  position: relative;
+}

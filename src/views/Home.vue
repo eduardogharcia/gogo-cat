@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img class="home__logo" src="../assets/img/logo.svg">
+    <h1 class="home__name">IBusao</h1>
+    <ListLines/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ListLines from '@/components/ListLines.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    ListLines
   }
 }
 </script>
+
+<style lang="scss" scoped>
+  .home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    &__name{
+      font-size: 25px;
+    }
+  }
+</style>

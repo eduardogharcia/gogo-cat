@@ -1,0 +1,47 @@
+.text-center{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.text-right{
+    text-align: right;
+}
+.text-uppercase{
+    text-transform: uppercase;
+}
+.text-ultra-light{
+    font-weight: 100;
+}
+.text-small{
+  font-size: 12px;
+}
+.text-smaller-1{
+  font-size: 0.9em;
+}
+.text-smaller-2{
+  font-size: 0.8em;
+}
+.text-smaller-3{
+    font-size: 0.7em;
+  }
+.text-bigger-1{
+  font-size: 1.2em;
+}
+.text-bigger-2{
+    font-size: 1.3em;
+}
+.text-bigger-4{
+    font-size: 1.5em;
+}
+.text-bold{
+    font-weight: bold;
+}
+.text-shout{
+    @extend .text-uppercase;
+    @extend .text-bold;
+}
+@media(min-width: $breakpoint-md){
+    .text-right-md{
+        text-align: right;
+    }
+}

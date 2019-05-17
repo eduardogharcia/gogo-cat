@@ -1,0 +1,66 @@
+<template>
+  <header class="navbar">
+    <router-link class="navbar__back-btn" v-bind:class="{ 'navbar__back-btn--hidden': backBtnHidde }" to="/"><img src="@/assets/img/arrow-left.svg" alt=""></router-link>
+    <hamburger-btn v-on:click="openClose" class="navbar__show-info-btn" />
+  </header>
+</template>
+
+<script>
+import HamburgerBtn from '@/components/HamburgerBtn';
+export default {
+  components: {
+    'hamburger-btn': HamburgerBtn
+  },
+  methods: {
+    openClose () {
+      this.$emit( 'openclose' );
+    }
+  },
+  watch: {
+    '$route' ( to ) {
+      if ( to.name == 'home' ) {
+        this.backBtnHidde = true 
+      } else {
+        this.backBtnHidde = false
+      }
+    }
+  }, 
+  created () {
+    if ( this.$route.name == 'home' ) {
+      this.backBtnHidde = true 
+    } else {
+      this.backBtnHidde = false
+    }
+  },
+  data () {
+    return {
+      backBtnHidde: false
+    }
+  }
+}
+</script>
+
+
+<style lang="scss" scoped>
+  .navbar{
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    &__back-btn{
+      margin: 10px 0 0 10px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      &--hidden{
+        opacity: 0;
+      }
+    }
+    &__show-info-btn{
+      margin: 10px 10px 0 0;
+    }
+  }
+</style>
+
