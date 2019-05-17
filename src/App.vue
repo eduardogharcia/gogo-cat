@@ -57,6 +57,7 @@
       max-width: 80%;
       height: 100vh;
       transition: left 200ms linear;
+      z-index: 3;
       &--open{
         left: 0;
         box-shadow: 0 0 0px 6px rgba(0,0,0,0.4);

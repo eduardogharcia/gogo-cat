@@ -23,13 +23,10 @@ export default {
   },
   computed: {
     line () {
-      if ( this.lines != undefined ) {
-        let id = this.$route.params.id;
-        return this.lines.find( function( element ) {
-          if ( element.id == id )  return element
-        })
-      }
-      return []
+      let id = this.$route.params.id;
+      return this.lines.find( function( element ) {
+        if ( element.id == id )  return element
+      })
     },
   }
 }

@@ -50,16 +50,15 @@ export default {
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 2;
     &__back-btn{
-      margin: 10px 0 0 10px;
       background-repeat: no-repeat;
       cursor: pointer;
       &--hidden{
         opacity: 0;
       }
-    }
-    &__show-info-btn{
-      margin: 10px 10px 0 0;
     }
   }
 </style>
