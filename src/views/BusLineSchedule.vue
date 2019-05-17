@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <schedule-header :from="line.from" :to="line.to"/>
+  <div class="busline-schedule">
+    <schedule-header v-if="line" :from="line.from" :to="line.to"/>
     <div class="content-list">
         <div class="container">
-          <schedule-list :schedule="line.schedule"/>
+          <schedule-list v-if="line" :schedule="line.schedule"/>
         </div> <!-- container -->
     </div> <!-- content-list -->
   </div>
@@ -14,17 +14,22 @@ import ScheduleHeader from '@/components/ScheduleHeader.vue'
 import ScheduleList from '@/components/ScheduleList.vue'
 
 export default {
-  props: ['lines'],
+  props: {
+    lines: Array
+  },
   components: {
     'schedule-header': ScheduleHeader,
     'schedule-list': ScheduleList
   },
   computed: {
     line () {
-      let id = this.$route.params.id;
-      return this.lines.find( function( element ) {
-        if ( element.id == id )  return element
-      })
+      if ( this.lines != undefined ) {
+        let id = this.$route.params.id;
+        return this.lines.find( function( element ) {
+          if ( element.id == id )  return element
+        })
+      }
+      return []
     },
   }
 }

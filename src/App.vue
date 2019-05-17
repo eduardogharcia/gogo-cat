@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="app">
     <nav-bar v-on:openclose="toggleAbout"/>
-    <transition name="page" mode="out-in">
-    <router-view :lines="lines"/>
+    <transition name="slide" mode="out-in">
+      <router-view :lines="lines"/>
     </transition>
     <about v-bind:class="{ app__about: true, 'app__about--open': aboutOpen }"/>
   </div>
@@ -30,7 +30,7 @@
       }
     },
     created () {
-      this.lines = localStorage.lines || []
+      this.lines = localStorage.lines ? JSON.parse( localStorage.lines ) : []
       axios.get( 'lines.js' )
       .then( response => {
         localStorage.lines =  JSON.stringify( response.data )
@@ -63,16 +63,28 @@
       }
     }
   }
-  .page-enter-active, .page-leave-active {
+  .slide-enter-active, .slide-leave-active {
     transition: opacity 200ms, transform 200ms;
   }
-  .page-enter, .page-leave-to {
+  .slide-enter{
     opacity: 0;
-    transform: translateX(30%);
+    &.home{
+      transform: translateX(-30%);
+    }
+    &.busline-schedule{
+      transform: translateX(30%);
+    }
   }
-  .page-leave-to{
+  .slide-leave-to{
     opacity: 0;
-    transform: translateX(-30%);
+    &.home{
+      transform: translateX(-30%);
+    }
+    &.busline-schedule{
+      transform: translateX(30%);
+    }
   }
-
+  .slide-enter, .slide-leave-to {
+    opacity: 0;
+  }
 </style>
