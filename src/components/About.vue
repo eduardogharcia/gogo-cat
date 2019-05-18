@@ -4,7 +4,7 @@
     <p>Meu nome é Eduardo Garcia e criei esse app para facilitar a vida de quem precisa pegar busão e sempre fica perdido com horários.</p>
     <p>Trabalho com <b>sites</b> e <b>sistemas</b>, se precisar é só chamar no <a href="mailto:eduardogarcia.nv@gmail.com">eduardogarcia.nv@gmail.com</a></p>
     <p><a target="_blank" href="https://instagram.com/eduardogharcia">@eduardogharcia</a></p>
-    <p><small>*Não me responsabilizo por horários errados, essas empresas fazem o que querem hehe.</small></p>
+    <p><small>*Não nos responsabilizamos por horários incorretos, as empresas podem alterá-los sem aviso prévio</small></p>
   </aside>
 </template>
 

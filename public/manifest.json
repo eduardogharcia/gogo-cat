@@ -1,6 +1,6 @@
 {
-  "name": "gogo-cat",
-  "short_name": "gogo-cat",
+  "name": "GogoCat",
+  "short_name": "GogoCat",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
