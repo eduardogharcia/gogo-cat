@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <img class="home__logo" src="../assets/img/logo.svg">
+    <div class="home__logo">
+      <Logo />
+    </div>
     <h1 class="home__name">GogoCat</h1>
     <ListLines :lines="lines"/>
   </div>
@@ -9,12 +11,14 @@
 <script>
 // @ is an alias to /src
 import ListLines from '@/components/ListLines.vue'
+import Logo from '@/assets/img/logo.svg?inline'
 
 export default {
   name: 'home',
   props: ['lines'],
   components: {
-    ListLines
+    ListLines,
+    Logo
   }
 }
 </script>

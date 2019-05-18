@@ -2,20 +2,25 @@
   <header class="schedule-header">
     <div class="schedule-header__normal" v-bind:style="{ opacity: opacityNormal }">
       <span class="schedule-header__place">{{from}}</span>
-      <span class="schedule-header__arrow"><img src="@/assets/img/chevron-down.svg" alt=""></span>
+      <span class="schedule-header__arrow"><chevron-down-icon /></span>
       <span class="schedule-header__place">{{to}}</span>
     </div>
     <div class="schedule-header__float" v-bind:style="{ opacity: opacityFloat }">
       <span class="schedule-header__place">{{from}}</span>
-      <span class="schedule-header__arrow"><img src="@/assets/img/chevron-down.svg" alt=""></span>
+      <span class="schedule-header__arrow"><chevron-down-icon /></span>
       <span class="schedule-header__place">{{to}}</span>
     </div>
   </header>
 </template>
 
 <script>
+import ChevronDownIcon from '@/assets/img/chevron-down.svg?inline'
+
 export default {
   name: 'ScheduleHeader',
+  components: {
+    'chevron-down-icon': ChevronDownIcon
+  },
   props: {
     from: String,
     to: String
@@ -67,7 +72,7 @@ export default {
       align-items: center;
       background-color: #296e99;
       z-index: 1;
-      .schedule-header__arrow img{
+      .schedule-header__arrow svg{
         width: 16px;
         transform: rotate(-90deg);
         margin: 0 10px;

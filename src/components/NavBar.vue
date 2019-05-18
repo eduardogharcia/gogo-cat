@@ -1,15 +1,18 @@
 <template>
   <header class="navbar">
-    <router-link class="navbar__back-btn" v-bind:class="{ 'navbar__back-btn--hidden': backBtnHidde }" to="/"><img src="@/assets/img/arrow-left.svg" alt=""></router-link>
+    <router-link class="navbar__back-btn" v-bind:class="{ 'navbar__back-btn--hidden': backBtnHidde }" to="/"><left-arrow-icon /></router-link>
     <hamburger-btn v-on:click="openClose" class="navbar__show-info-btn" />
   </header>
 </template>
 
 <script>
 import HamburgerBtn from '@/components/HamburgerBtn';
+import LeftArrowIcon from '@/assets/img/arrow-left.svg?inline'
+
 export default {
   components: {
-    'hamburger-btn': HamburgerBtn
+    'hamburger-btn': HamburgerBtn,
+    'left-arrow-icon': LeftArrowIcon
   },
   methods: {
     openClose () {
