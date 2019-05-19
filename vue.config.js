@@ -1,3 +1,7 @@
 module.exports = {
-  publicPath: 'gogo-cat'
+  publicPath: 'gogo-cat',
+
+  pwa: {
+    themeColor: '#468ccc'
+  }
 }
