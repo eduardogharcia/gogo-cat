@@ -38,14 +38,13 @@ export default {
     {
       transition: all 200ms ease-in-out;
       cursor: pointer;
-      border-radius: 1px;
-      height: 3px;
+      height: 2px;
       width: 35px;
       background: #fff;
       position: absolute;
       display: block;
       content: '';
-      border-radius: 10px;
+      border-radius: 1px;
     }
     span{
       &::before {
