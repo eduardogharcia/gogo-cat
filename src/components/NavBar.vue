@@ -50,7 +50,7 @@ export default {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
