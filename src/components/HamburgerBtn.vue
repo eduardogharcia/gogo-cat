@@ -70,5 +70,8 @@ export default {
         }
       }
     }
+    &:active, &:focus{
+      outline: none
+    }
   }
 </style>
