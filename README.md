@@ -1,21 +1,25 @@
-# gogo-cat
+# GogoCat
+A simple [vue.js](https://github.com/vuejs/vue) application that shows bus line schedule.
 
-## Project setup
+[Demo](https://eduardogharcia.github.io/gogo-cat/)
+
+
+#### Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 ```
 npm run build
 ```
 
-### Run your tests
+#### Run your tests
 ```
 npm run test
 ```
@@ -25,7 +29,7 @@ npm run test
 npm run lint
 ```
 
-### Run your unit tests
+#### Run your unit tests
 ```
 npm run test:unit
 ```
