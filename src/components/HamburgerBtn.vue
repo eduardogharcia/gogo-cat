@@ -1,5 +1,9 @@
 <template>
-  <button v-on:click="click" class="hamburger" v-bind:class="{ 'hamburger--active': active }"><span></span></button>
+  <button v-on:click="click" class="hamburger" v-bind:class="{ 'hamburger--active': active }">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </template>
 
 <script>
@@ -24,48 +28,42 @@ export default {
     background: transparent;
     border: none;
     cursor: pointer; 
-    padding: 10px 35px 16px 0px;
+    padding: 0;
     position: relative;
-    height: 40px;
+    height: 25px;
     width: 40px;
-    span{
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    span,
-    span:before,
-    span:after
-    {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    span {
+      // left: 50%;
+      // transform: translateX(-50%);
+
       transition: all 200ms ease-in-out;
       cursor: pointer;
       height: 2px;
-      width: 35px;
+      width: 40px;
       background: #fff;
-      position: absolute;
+      // position: absolute;
       display: block;
       content: '';
       border-radius: 1px;
-    }
-    span{
-      &::before {
-        top: -10px; 
-      }
-      &::after {
-        bottom: -10px;
-      }
+
+      transform-origin: 1px 1px;
+     
     }
     &--active{
       span{
         background-color: transparent;
-        &:before, 
-        &:after {
-          top: 0;
+        &:first-child {
+          transform: rotate(31deg);
+          background-color: #fff;
+          width: 46px;
         }
-        &:before {
-          transform: rotate(45deg);
-        }
-        &:after {
-          transform: rotate(-45deg);
+        &:last-child {
+          transform: rotate(-31deg);
+          background-color: #fff;
+          width: 46px;
         }
       }
     }

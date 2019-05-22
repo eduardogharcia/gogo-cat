@@ -70,12 +70,14 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-right: 10px;
       background-color: #296e99;
       z-index: 1;
       .schedule-header__arrow svg{
         width: 16px;
         transform: rotate(-90deg);
         margin: 0 10px;
+        display: block;
       }
     }
   }

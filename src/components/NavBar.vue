@@ -62,6 +62,10 @@ export default {
       &--hidden{
         opacity: 0;
       }
+      svg{
+        display: block;
+        height: 30px;
+      }
     }
   }
 </style>
