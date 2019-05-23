@@ -26,6 +26,7 @@
     },
     methods: {
       toggleAbout () {
+        if ( ! this.about ) this.$ga.screenview('About')
         this.aboutOpen = this.aboutOpen ? false : true
       }
     },
@@ -39,7 +40,7 @@
         this.lines = JSON.parse( localStorage.lines )
       })
       .catch ( e => {
-        console.log( 'Error' )
+        // console.log( 'Error' )
         this.errors.push( e )
       })
     }
