@@ -32,7 +32,7 @@
     },
     created () {
       this.lines = localStorage.lines ? JSON.parse( localStorage.lines ) : []
-      axios.get( 'lines.js' )
+      axios.get( 'lines.json' )
       .then( response => {
         localStorage.lines =  JSON.stringify( response.data )
         let date = new Date()
