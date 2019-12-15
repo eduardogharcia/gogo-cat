@@ -6,7 +6,13 @@
     "schedule": [
       {
         "time": "6:05",
-        "company": "Expresso Araguari"
+        "company": "Expresso Araguari",
+        "obs": "Seg. a sab."
+      },
+      {
+        "time": "6:40",
+        "company": "Expresso Araguari",
+        "obs": "Seg. a sab."
       },
       {
         "time": "6:20",
@@ -14,14 +20,18 @@
         "obs": "Exceto domingos"
       },
       {
+        "time": "6:30",
+        "company": "Expresso Araguari"
+      },
+      {
+        "time": "6:55",
+        "company": "Expresso Araguari",
+        "obs": "Seg. a sab."
+      },
+      {
         "time": "7:00",
         "company": "Transduarte",
         "obs": "Domingos"
-      },
-      {
-        "time": "7:30",
-        "company": "Expresso Araguari",
-        "obs": "Seg. a sab."
       },
       {
         "time": "7:30",
@@ -35,13 +45,13 @@
       },
       {
         "time": "9:30",
-        "company": "Expresso Araguari",
+        "company": "Transduarte",
         "obs": "Seg. a sab."
       },
       {
-        "time": "9:30",
-        "company": "Transduarte",
-        "obs": "Seg. a sab."
+        "time": "11:10",
+        "company": "Expresso Araguari",
+        "obs": "Seg. a sex."
       },
       {
         "time": "11:30",
@@ -64,14 +74,9 @@
         "obs": "Seg. a sex."
       },
       {
-        "time": "14:20",
-        "company": "Expresso Araguari",
-        "obs": "Seg. a sab."
-      },
-      {
         "time": "15:00",
         "company": "Expresso Araguari",
-        "obs": "Seg. a sab."
+        "obs": "Seg. a sex."
       },
       {
         "time": "16:15",
@@ -79,13 +84,8 @@
         "obs": "Seg. a sex."
       },
       {
-        "time": "16:40",
+        "time": "17:10",
         "company": "Expresso Araguari"
-      },
-      {
-        "time": "17:00",
-        "company": "Expresso Araguari",
-        "obs": "Somente domingos"
       },
       {
         "time": "17:30",
@@ -101,6 +101,11 @@
         "time": "18:30",
         "company": "Transduarte",
         "obs": "Exceto sábados"
+      },
+      {
+        "time": "18:40",
+        "company": "Expresso Araguari",
+        "obs":"Somente domingos"
       },
       {
         "time": "19:30",
@@ -120,19 +125,9 @@
         "obs": "Somente domingos"
       },
       {
-        "time": "6:50",
-        "company": "Expresso Araguari",
-        "obs": "Seg. a sex."
-      },
-      {
         "time": "7:00",
         "company": "Transduarte",
         "obs": "Exceto domingos"
-      },
-      {
-        "time": "8:30",
-        "company": "Expresso Araguari",
-        "obs": "Seg. a sab."
       },
       {
         "time": "9:00",
@@ -141,8 +136,7 @@
       },
       {
         "time": "9:40",
-        "company": "Expresso Araguari",
-        "obs": "Somente domingos"
+        "company": "Expresso Araguari"
       },
       {
         "time": "11:00",
@@ -170,11 +164,6 @@
         "obs": "Seg. a sex."
       },
       {
-        "time": "13:30",
-        "company": "Expresso Araguari",
-        "obs": "Seg. a sab."
-      },
-      {
         "time": "15:30",
         "company": "Transduarte",
         "obs": "Seg. a sex."
@@ -186,13 +175,18 @@
       },
       {
         "time": "17:00",
+        "company": "Expresso Araguari",
+        "obs": "Somente domingos"
+      },
+      {
+        "time": "17:00",
         "company": "Transduarte",
         "obs": "Seg. a sex."
       },
       {
         "time": "17:30",
         "company": "Expresso Araguari",
-        "obs": "Seg. a sex."
+        "obs": "Seg. a sab."
       },
       {
         "time": "18:00",
@@ -212,10 +206,6 @@
         "time": "19:00",
         "company": "Transduarte",
         "obs": "Seg. a sex."
-      },
-      {
-        "time": "20:20",
-        "company": "Expresso Araguari"
       },
       {
         "time": "21:00",
